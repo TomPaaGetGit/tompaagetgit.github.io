@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 250px 3fr 4fr 1fr;
+            grid-template-areas: 
+                'header header header'
+                'menu mainContent sponsor'
+                'menu mainContent sponsor'
+                'footer footer footer';
+        }
+
+        div.sponsor {
+            background-color: rgb(36, 118, 201);
+            grid-area: sponsor;
+        }
+
+        div.header {
+            background-color: rgb(180, 180, 36);
+            grid-area: header;
+        }
+
+        div.mainContent {
+            background-color: rgb(209, 40, 40);
+            grid-area: mainContent;
+        }
+
+        div.menu {
+            background-color: rgb(206, 57, 131);
+            grid-area: menu;
+        }
+
+        div.footer {
+            background-color: rgb(47, 185, 47);
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header"></div>
+        <div class="menu"></div>
+        <div class="mainContent"></div>
+        <div class="sponsor"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
