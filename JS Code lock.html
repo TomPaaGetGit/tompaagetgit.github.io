@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(20, 20, 20);
+    }
+
+    .container {
+        height: 400px;
+        width: 400px;
+    }
+
+    div.button {
+        color: white;
+        background-color: rgb(50, 50, 50);
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        font-size: 80px;
+        float: left;
+        text-align: center;
+    }
+
+    div.output {
+        background-color: rgb(50, 50, 50);
+        height: 100px;
+        width: 340px;
+        margin: 10px;
+        color: white;
+        font-size: 80px;
+    }
+</style>
+<script>
+    function tall1() {
+        document.getElementById('output').innerHTML += '1';
+    }
+
+    function tall2() {
+        document.getElementById('output').innerHTML += '2';
+    }
+
+    function tall3() {
+        document.getElementById('output').innerHTML += '3';
+    }
+
+    function tall4() {
+        document.getElementById('output').innerHTML += '4';
+    }
+
+    function tall5() {
+        document.getElementById('output').innerHTML += '5';
+    }
+
+    function tall6() {
+        document.getElementById('output').innerHTML += '6';
+    }
+
+    function tall7() {
+        document.getElementById('output').innerHTML += '7';
+    }
+
+    function tall8() {
+        document.getElementById('output').innerHTML += '8';
+    }
+
+    function tall9() {
+        document.getElementById('output').innerHTML += '9';
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="output" id="output"></div>
+        <div>
+            <div class="button" onclick="tall1()">1</div>
+            <div class="button" onclick="tall2()">2</div>
+            <div class="button" onclick="tall3()">3</div>
+        </div>
+        <div>
+            <div class="button" onclick="tall4()">4</div>
+            <div class="button" onclick="tall5()">5</div>
+            <div class="button" onclick="tall6()">6</div>
+        </div>
+        <div>
+            <div class="button" onclick="tall7()">7</div>
+            <div class="button" onclick="tall8()">8</div>
+            <div class="button" onclick="tall9()">9</div>
+        </div>
+    </div>
+</body>
+
+</html>

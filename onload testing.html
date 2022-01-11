@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload='loadlogBody()'>
+    <div id='bodyLoad'></div>
+    <div id='page'></div>
+    <img src="https://cdn.statically.io/img/i.pinimg.com/originals/bf/82/f6/bf82f6956a32819af48c2572243e8286.jpg" alt="4K image">
+</body>
+
+<script>
+    function loadlogBody() {
+        document.getElementById('bodyLoad').innerHTML = 'Under lasting av siden: ' + new Date().toTimeString();
+    }
+
+    function loadlogPage() {
+        document.getElementById('page').innerHTML = 'Etter lasting av siden: ' + new Date().toTimeString();
+    }
+
+    loadlogPage();
+</script>
+</html>
