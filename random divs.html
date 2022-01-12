@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body>
+    <div id="resultat"></div>
+    <div id="resultatText" style="font-family: monospace"></div>
+
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var resultatTextDiv = document.getElementById('resultatText');
+        var borderStyler = document.getElementById('borderStyler');
+        var borderSizer = document.getElementById('borderSizer');
+
+        showDiv();
+
+        function showDiv() {
+            var width = Math.floor(Math.random() * 100);    
+            var height = Math.floor(Math.random() * 100);
+            var border = Math.floor(Math.random() * 100);
+            
+            resultatDiv.innerHTML = '<div style="'
+                + 'width: ' + width.value + 'px;'
+                + 'height: ' + height.value + 'px;'
+                + 'border-style: solid ' + border.value + 'px;'
+                + '">' + '</div>';
+
+            resultatTextDiv.innerHTML = '' +
+                'Høyde = ' + height + '<br/>' +
+                'Bredde = ' + width + '<br/>' +
+                'Border = ' + border;
+
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body>
+    <input id="heightSlider" type="range" min="1" max="1000" step="1" oninput="showDiv()" />
+    <input id="widthSlider" type="range" min="1" max="1000" step="1" oninput="showDiv()" />
+    <div class="resultat" id="resultat"></div>
+    <div id="resultatText" style="font-family: monospace"></div>
+
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var resultatTextDiv = document.getElementById('resultatText');
+        var borderStyler = document.getElementById('borderStyler');
+        var borderSizer = document.getElementById('borderSizer');
+
+        showDiv();
+
+        function showDiv() {
+            var width = parseInt(widthSlider.value);    
+            var height = parseInt(heightSlider.value);
+            var sum = height + width;
+            var areal = 2 * height + 2 * width;
+            
+            resultatDiv.innerHTML = '<div style="'
+                + 'width: ' + widthSlider.value + 'px;'
+                + 'height: ' + heightSlider.value + 'px;'
+                + '">' + '</div>';
+
+            resultatTextDiv.innerHTML = '' +
+            'Høyde + bredde omkrets: ' + height + ' + ' + width + ' = ' + sum + '<br/>' +
+            'Høyde + bredde areal: ' + height + '*2 + ' + width + '*2' + ' = ' + areal + '<br/>'; 
+        }
+</script>
+</body>
+</html>
