@@ -15,26 +15,25 @@
     <script>
         var resultatDiv = document.getElementById('resultat');
         var resultatTextDiv = document.getElementById('resultatText');
-        var borderStyler = document.getElementById('borderStyler');
-        var borderSizer = document.getElementById('borderSizer');
 
         showDiv();
 
         function showDiv() {
-            var width = Math.floor(Math.random() * 100);    
-            var height = Math.floor(Math.random() * 100);
-            var border = Math.floor(Math.random() * 100);
+            var randomWidth = 0 + Math.floor(Math.random() * 100);    
+            var randomHeight = 0 + Math.floor(Math.random() * 100);
+            var randomBorder = 0 + Math.floor(Math.random() * 100);
             
             resultatDiv.innerHTML = '<div style="'
-                + 'width: ' + width.value + 'px;'
-                + 'height: ' + height.value + 'px;'
-                + 'border-style: solid ' + border.value + 'px;'
-                + '">' + '</div>';
+                + 'background-color: red; '
+                + 'width: '              + randomWidth + 'px;'
+                + 'height: '             + randomHeight + 'px;'
+                + 'border: solid '       + randomBorder + 'px;'
+                + '">'                   + '</div>';
 
             resultatTextDiv.innerHTML = '' +
-                'Høyde = ' + height + '<br/>' +
-                'Bredde = ' + width + '<br/>' +
-                'Border = ' + border;
+                'Høyde = ' + randomHeight + '<br/>' +
+                'Bredde = ' + randomWidth + '<br/>' +
+                'Border = ' + randomBorder;
 
         }
 </script>

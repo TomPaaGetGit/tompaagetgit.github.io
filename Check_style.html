@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .chkBackgroundColor {
+            background-color: blueviolet;
+        }
+
+        .chkBorder {
+            border: black 2px solid;
+        }
+
+        .chkPadding {
+            padding: 10px;
+        }
+
+        .chkColor {
+            color: turquoise;
+        }
+        .chkMargin {
+            margin: 20px;
+        }
+        .chosenDiv{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="target1" onclick="toggleSelected(this)"> Bla bla bla</div>
+    <div id="target2" onclick="toggleSelected(this)"> Bla bla bla</div>
+    
+    <input id="chkBackgroundColor" type="checkbox" onchange="pickAStyle(this)" /> background color <br>
+    <input id="chkBorder" type="checkbox" onchange="pickAStyle(this)" /> border <br>
+    <input id="chkPadding" type="checkbox" onchange="pickAStyle(this)" /> padding <br>
+    <input id="chkMargin" type="checkbox" onchange="pickAStyle(this)" /> margin <br>
+    <input id="chkColor" type="checkbox" onchange="pickAStyle(this)" /> color <br>
+    <script>
+        
+        var selectedDiv = document.getElementById('target1');
+
+        function toggleSelected(selectDiv) {
+
+            selectedDiv.classList.remove('chosenDiv');
+            selectDiv.classList.toggle('chosenDiv');
+
+            selectedDiv = selectDiv;
+
+            chkBackgroundColor.checked = selectedDiv.classList.contains('chkBackgroundColor');
+            chkBorder.checked = selectedDiv.classList.contains('chkBorder');
+            chkPadding.checked = selectedDiv.classList.contains('chkPadding');
+            chkMargin.checked = selectedDiv.classList.contains('chkMargin');
+            chkColor.checked = selectedDiv.classList.contains('chkColor');
+        }
+        function pickAStyle(stil){
+            selectedDiv.classList.toggle(stil.id);
+        }
+    </script>
+</body>
+
+</html>
