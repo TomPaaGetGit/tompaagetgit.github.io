@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 400px 2fr;
+            grid-template-rows: 80px 600px 1fr;
+            grid-template-areas: 'header header' 
+                                 'menu mainContent'
+                                 'footer mainContent';
+        }
+
+        div.header {
+            background-color: rgba(255, 0, 120, 0.712);
+            grid-area: header;
+            text-align: center;
+        }
+
+        div.menu {
+            background-color: rgb(0, 87, 168);
+            grid-area: menu;
+            text-align: center;
+        }
+
+        div.mainContent {
+            background-color: greenyellow;
+            grid-area: mainContent;
+            text-align: center;
+        }
+
+        div.footer {
+            background-color: rgb(0, 145, 48);
+            grid-area: footer;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 200px 5fr;
+                grid-template-rows: 70px 50px 30px;
+                grid-template-areas: 'header' 
+                                     'menu'
+                                     'mainContent'
+                                     'footer';
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header"><h1>Team 2 oppgave</h1></div>
+        <div onclick="count()" style="height: 100px; width: 100px; background-color: goldenrod;" class="menu">Coins Menu</div>
+        <div class="mainContent"><img src="https://www.freeiconspng.com/uploads/-is-brought-to-you-by-swiftcoverm---for-super-fast-home-insurance-18.png"></img></div>
+        <div class="footer" id="coinDisplay">Inventory</div>
+
+<script>
+    var coinPouch = 0;
+    
+
+    function count() {
+        
+     coinPouch++;
+     document.getElementById('coinDisplay').innerHTML = 'Du har ' + coinPouch + ' coins!';
+    }
+
+</script>
+</body>
+</html>
