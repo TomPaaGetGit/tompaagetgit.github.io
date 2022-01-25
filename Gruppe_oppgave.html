@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        background-color: blue;
+    }
+</style>
+<body>
+    <div id="app"></div>
+
+    <script>
+        //Model
+            var ord1 = '_____';
+            var ord2 = '_____';
+            var ord3 = '_____';
+            var ord4 = '_____';
+            var ord5 = '_____';
+            var ord6 = '_____';
+            var ord7 = '_____';
+        //View
+            function updateView() {
+                document.getElementById('app').innerHTML = `
+                <div>Vi kicka igang prosjektet med at den ${ord1} Tom
+                 med sin  ${ord2} personlighet lagde et oppsett. 
+                 Mens den ${ord3} Dani så på med sine ${ord4}  øyne. 
+                 Kim holdt må med sine egne ${ord5} ting. 
+                 Kristian følte seg litt ${ord6} og Adrian klasket på sitt 
+                ${ord7} tastatur for å bli ferdig.</div>
+
+                <button class onclick=addOrd1('Fantastiske')>Test1</button>
+                <button onclick=addOrd1('Dumme')>Test2</button>
+                <br>
+
+                <button onclick=addOrd2('falske')>Test1</button>
+                <button onclick=addOrd2('Fine?')>Test2</button>
+                <br>
+
+                <button onclick=addOrd3('smellfeite')>Test1</button>
+                <button onclick=addOrd3('kjekke')>Test2</button>
+                <br>
+
+                <button onclick=addOrd4('nylakkerte')>Test1</button>
+                <button onclick=addOrd4('feilplasserte')>Test2</button>
+                <br>
+                
+                <button onclick=addOrd5('egoistiske')>Test1</button>
+                <button onclick=addOrd5('muskuløse')>Test2</button>
+                <br>
+                
+                <button onclick=addOrd6('svimmel')>Test1</button>
+                <button onclick=addOrd6('forelsket')>Test2</button>
+                <br>
+
+                <button onclick=addOrd7('nuddelfylte')>Test1</button>
+                <button onclick=addOrd7('muggete')>Test2</button>
+                `;
+            }
+        //Controller
+        updateView();
+
+        function addOrd1(clicked) {
+                ord1 = clicked;
+                updateView();
+            }
+        function addOrd2(clicked) {
+                ord2 = clicked;
+                updateView();
+            }
+        function addOrd3(clicked) {
+                ord3 = clicked;
+                updateView();
+            }
+        function addOrd4(clicked) {
+                ord4 = clicked;
+                updateView();
+            }
+        function addOrd5(clicked) {
+                ord5 = clicked;
+                updateView();
+            }
+            function addOrd6(clicked) {
+                ord6 = clicked;
+                updateView();
+            }
+            function addOrd7(clicked) {
+                ord7 = clicked;
+                updateView();
+            }
+    </script>
+    <!--altvitende, attraktive, pastøse, brede, dumme, ekle, falske, følsomme, harde, uavhengige.-->
+
+    <!-- vi kicka igang prosjektet med at den _____ tom
+med sin _____ personlighet lagde et oppsett.
+mens den _____ dani så på med _____ øyne.
+kim holdt må med sine egne ____ ting.
+kristian følte seg litt _____
+og adrian klasket på sitt _____ tastatur for å bli ferdig. -->
+</body>
+</html>
+
