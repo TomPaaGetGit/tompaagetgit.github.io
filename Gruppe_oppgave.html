@@ -4,103 +4,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rap IQ Test</title>
 </head>
 <style>
-    div {
-        background-color: blue;
+   @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+    *
+
+    {
+        font-family: 'DotGothic16', sans-serif;
+        box-sizing: border-box;
     }
+    div {
+        margin: 10vh;
+        padding: 5vh;
+        background-color: rgb(43, 197, 202);
+        justify-content: center;
+        align-items: center;
+        
+    }
+    body {
+        background-color: #111;
+    }
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    button {
+        margin-left: 30px;
+        background-color: #f86098e1;
+        font-size: 18px;
+        border-radius: 45%;
+        border: solid 3px;
+    }
+    .button1 {
+        justify-content: center;
+        align-items: center;
+    }
+    .button2 {
+        justify-content: center;
+        align-items: center;
+    }
+    .button3 {
+        margin-left: 50px
+        
+    }
+
+    span {  
+        color: #fe1a6ee1;
+        font-weight: bolder;
+    }
+     .img {
+        float: left;
+        position: relative;
+        margin: 5px;
+        padding: 5px;
+    } 
+    
 </style>
 <body>
     <div id="app"></div>
-
     <script>
         //Model
             var ord1 = '_____';
             var ord2 = '_____';
             var ord3 = '_____';
             var ord4 = '_____';
-            var ord5 = '_____';
-            var ord6 = '_____';
-            var ord7 = '_____';
+            var rockCode = '';
+            var imageInput = '';
+            var imageTarget = '';
+
         //View
             function updateView() {
                 document.getElementById('app').innerHTML = `
-                <div>Vi kicka igang prosjektet med at den ${ord1} Tom
-                 med sin  ${ord2} personlighet lagde et oppsett. 
-                 Mens den ${ord3} Dani så på med sine ${ord4}  øyne. 
-                 Kim holdt må med sine egne ${ord5} ting. 
-                 Kristian følte seg litt ${ord6} og Adrian klasket på sitt 
-                ${ord7} tastatur for å bli ferdig.</div>
+                <button onclick=addOrd1('drive')>drive</button>
+                <button onclick=addOrd1('flying')>flying</button>
 
-                <button class onclick=addOrd1('Fantastiske')>Test1</button>
-                <button onclick=addOrd1('Dumme')>Test2</button>
+                <button class="button1" onclick=addOrd2('power')>power</button>
+                <button onclick=addOrd2('money')>money</button>
                 <br>
 
-                <button onclick=addOrd2('falske')>Test1</button>
-                <button onclick=addOrd2('Fine?')>Test2</button>
+                <p>It's about <span>${ord1}</span>, It's about <span>${ord2}</span>.</p>
+                <br>
+                <button onclick=addOrd3('confused')>confused</button>
+                <button onclick=addOrd3('hungry')>hungry</button>
+
+                <button onclick=addOrd4('fail')>fail</button>
+                <button class="button2" onclick=addOrd4('devour')>devour</button>
                 <br>
 
-                <button onclick=addOrd3('smellfeite')>Test1</button>
-                <button onclick=addOrd3('kjekke')>Test2</button>
-                <br>
-
-                <button onclick=addOrd4('nylakkerte')>Test1</button>
-                <button onclick=addOrd4('feilplasserte')>Test2</button>
-                <br>
-                
-                <button onclick=addOrd5('egoistiske')>Test1</button>
-                <button onclick=addOrd5('muskuløse')>Test2</button>
-                <br>
-                
-                <button onclick=addOrd6('svimmel')>Test1</button>
-                <button onclick=addOrd6('forelsket')>Test2</button>
-                <br>
-
-                <button onclick=addOrd7('nuddelfylte')>Test1</button>
-                <button onclick=addOrd7('muggete')>Test2</button>
+                <p>We stay <span>${ord3}</span>, we <span>${ord4}</span>.</p>
+                <button onclick="reset()">RESET</button>
+                <div>${imageTarget}</div>
                 `;
             }
+            updateView();
         //Controller
-        updateView();
-
-        function addOrd1(clicked) {
+            function addOrd1(clicked) {
                 ord1 = clicked;
+                imageInput = clicked;
+                rockCode += clicked;
                 updateView();
+                checkRockCode();
             }
-        function addOrd2(clicked) {
+
+            function addOrd2(clicked) {
                 ord2 = clicked;
+                imageInput = clicked;
+                rockCode += clicked;
                 updateView();
+                checkRockCode();
             }
-        function addOrd3(clicked) {
+
+            function addOrd3(clicked) {
                 ord3 = clicked;
+                imageInput = clicked;
+                rockCode += clicked;
                 updateView();
+                checkRockCode();
             }
-        function addOrd4(clicked) {
+
+            function addOrd4(clicked) {
                 ord4 = clicked;
+                imageInput = clicked;
+                rockCode += clicked;
+                updateView();
+                checkRockCode();
+            }
+
+            function checkRockCode() {
+                if (imageInput == 'drive') imageTarget += '<img src="https://i.imgur.com/a2LJjUr.png" width="200" height="150" alt="Drive">';
+                if (imageInput == 'flying') imageTarget += '<img src="https://i.imgur.com/a1sC2qZ.jpg" width="200" height="150" alt="Flying">';
+                if (imageInput == 'power') imageTarget += '<img src="https://i.imgur.com/ENSGcOt.gif" width="200" height="150" alt="power">';
+                if (imageInput == 'money') imageTarget += '<img src="https://i.imgur.com/rZPAfeX.jpeg" width="200" height="150" alt="money">';
+                if (imageInput == 'confused') imageTarget += '<img src="https://i.imgur.com/oYaUl83.png" width="200" height="150" alt="confused">';
+                if (imageInput == 'hungry') imageTarget += '<img src="https://i.imgur.com/jgGM8aK.jpeg" width="200" height="150" alt="hungry">';
+                if (imageInput == 'fail') imageTarget += '<img src="https://i.imgur.com/LQHwoiY.gif" width="200" height="150" alt="fail">';
+                if (imageInput == 'devour') imageTarget += '<img src="https://i.imgur.com/dJXKNkG.png" width="200" height="150" alt="devour">';
+                if (rockCode == 'drivepowerhungrydevour') rockCode = window.location.assign('https://youtu.be/C0SjUfzl04c');
+                if (rockCode == 'flyingmoneyconfusedfail') rockCode = window.location.assign('https://youtu.be/s9mTQYFF57I');
                 updateView();
             }
-        function addOrd5(clicked) {
-                ord5 = clicked;
+
+            function reset(){
+                ord1 = '_____';
+                ord2 = '_____';
+                ord3 = '_____';
+                ord4 = '_____';
+                imageTarget = '';
+                rockCode = '';
                 updateView();
             }
-            function addOrd6(clicked) {
-                ord6 = clicked;
-                updateView();
-            }
-            function addOrd7(clicked) {
-                ord7 = clicked;
-                updateView();
-            }
+
     </script>
     <!--altvitende, attraktive, pastøse, brede, dumme, ekle, falske, følsomme, harde, uavhengige.-->
 
-    <!-- vi kicka igang prosjektet med at den _____ tom
-med sin _____ personlighet lagde et oppsett.
-mens den _____ dani så på med _____ øyne.
-kim holdt må med sine egne ____ ting.
-kristian følte seg litt _____
-og adrian klasket på sitt _____ tastatur for å bli ferdig. -->
+    <!-- vi kicka igang prosjektet med at tom sa det handla om drive.
+dani mente det handla om power, adrian holdt seg hungry og henta nudler.
+mens kim stjelte nudlene til adrian og devour. 
+https://i.imgur.com/rZPAfeX.jpeg
+-->
 </body>
 </html>
 
