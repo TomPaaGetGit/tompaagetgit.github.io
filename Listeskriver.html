@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'></div>
+    <script>
+        //MODEL
+        var handleListe = [];
+        var innlagt = '';
+        //VIEW
+        function showApp() { 
+        var result = '';
+        for (let index = 0; index < handleListe.length; index++) {
+            const varer = handleListe[index];
+            result += `
+             <div onclick="slett(${index})">${varer}</div>
+            `;
+        } 
+        document.getElementById('app').innerHTML = `
+        <input type="text" oninput="innlagt = this.value">
+        <button onclick="leggTil()">Legg til</button>
+        <button onclick="fjern()">Fjern siste på lista</button>
+        <button onclick="shit()">fjern første</button>
+        <button onclick="snu()">snu lista</button>
+        <button onclick="sorter()">sorter</button>
+        <div>${result}</div>
+        `;
+        }
+        showApp();
+
+        //CONTROLLER
+        function slett(clicked) {
+            handleListe.splice(clicked, 1);
+            showApp();
+        }
+        function leggTil() {
+            handleListe.push(innlagt);
+            showApp();
+        }
+        function fjern() {
+            handleListe.pop();
+            showApp();
+        }
+        function shit() {
+            handleListe.shift();
+            showApp();
+        }
+        function snu() {
+            handleListe.reverse();
+            showApp();
+        }
+        function sorter() {
+            handleListe.sort();
+            showApp();
+        }
+    </script>
+</body>
+</html>
