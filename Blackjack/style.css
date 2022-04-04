@@ -1,0 +1,10 @@
+.gamecontainer {
+    clear: left;
+    font-size: 36px;
+}
+.cards {
+    font-size: 120px;
+}
+.first {
+    float: left;
+}
