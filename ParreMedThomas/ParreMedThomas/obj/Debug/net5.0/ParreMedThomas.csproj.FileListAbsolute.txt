@@ -1,0 +1,16 @@
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\bin\Debug\net5.0\ParreMedThomas.exe
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\bin\Debug\net5.0\ParreMedThomas.deps.json
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\bin\Debug\net5.0\ParreMedThomas.runtimeconfig.json
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\bin\Debug\net5.0\ParreMedThomas.runtimeconfig.dev.json
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\bin\Debug\net5.0\ParreMedThomas.dll
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\bin\Debug\net5.0\ParreMedThomas.pdb
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.csproj.AssemblyReference.cache
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.AssemblyInfoInputs.cache
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.AssemblyInfo.cs
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.csproj.CoreCompileInputs.cache
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.dll
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\refint\ParreMedThomas.dll
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.pdb
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ParreMedThomas.genruntimeconfig.cache
+C:\Users\warlo\source\repos\ParreMedThomas\ParreMedThomas\obj\Debug\net5.0\ref\ParreMedThomas.dll

@@ -1,0 +1,16 @@
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\bin\Debug\net5.0\ParProgWebShop.exe
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\bin\Debug\net5.0\ParProgWebShop.deps.json
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\bin\Debug\net5.0\ParProgWebShop.runtimeconfig.json
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\bin\Debug\net5.0\ParProgWebShop.runtimeconfig.dev.json
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\bin\Debug\net5.0\ParProgWebShop.dll
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\bin\Debug\net5.0\ParProgWebShop.pdb
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.csproj.AssemblyReference.cache
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.AssemblyInfoInputs.cache
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.AssemblyInfo.cs
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.csproj.CoreCompileInputs.cache
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.dll
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\refint\ParProgWebShop.dll
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.pdb
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ParProgWebShop.genruntimeconfig.cache
+C:\Users\warlo\source\repos\ParProgWebShop\ParProgWebShop\obj\Debug\net5.0\ref\ParProgWebShop.dll
