@@ -1,0 +1,4 @@
+﻿const model = {
+    data: {
+    }
+}

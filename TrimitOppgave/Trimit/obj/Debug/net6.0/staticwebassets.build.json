@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "5JgzrdCI17LN7P0matAPVx9dywqs9rIJzdP26+kaNxw=",
+  "Source": "Trimit",
+  "BasePath": "_content/Trimit",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Trimit\\wwwroot",
+      "Source": "Trimit",
+      "ContentRoot": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\",
+      "BasePath": "_content/Trimit",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\Index.html",
+      "SourceId": "Trimit",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\",
+      "BasePath": "_content/Trimit",
+      "RelativePath": "Index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Index.html"
+    },
+    {
+      "Identity": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\JS\\Controller.js",
+      "SourceId": "Trimit",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\",
+      "BasePath": "_content/Trimit",
+      "RelativePath": "JS/Controller.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\Controller.js"
+    },
+    {
+      "Identity": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\JS\\Model.js",
+      "SourceId": "Trimit",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\",
+      "BasePath": "_content/Trimit",
+      "RelativePath": "JS/Model.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\Model.js"
+    },
+    {
+      "Identity": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\JS\\View.js",
+      "SourceId": "Trimit",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\warlo\\source\\repos\\Trimit\\Trimit\\wwwroot\\",
+      "BasePath": "_content/Trimit",
+      "RelativePath": "JS/View.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\View.js"
+    }
+  ]
+}
