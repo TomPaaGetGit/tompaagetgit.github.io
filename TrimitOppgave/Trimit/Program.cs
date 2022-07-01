@@ -8,8 +8,8 @@ app.MapGet("/joke", async () =>
 {
     var client = new RestClient("https://api.chucknorris.io/jokes/random");
     var request = new RestRequest();
-    var joke = await client.GetAsync<ApiJoke>(request);
-    return new JokeViewModel { JokeText = joke.value };
+    var Joke = await client.GetAsync<ApiJoke>(request);
+    return new JokeViewModel { JokeText = Joke.Value, JokeId = Joke.Id};
 });
 app.UseStaticFiles();
 app.Run();

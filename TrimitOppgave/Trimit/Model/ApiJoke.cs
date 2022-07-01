@@ -2,6 +2,7 @@
 {
     public class ApiJoke
     {
-        public string value { get; set; }
+        public string Id { get; set; }
+        public string Value { get; set; }
     }
 }
