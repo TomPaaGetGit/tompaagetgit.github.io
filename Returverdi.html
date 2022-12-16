@@ -73,9 +73,9 @@
         function tilfeldigBokstav() {
             var tall = tilfeldigTall(0, 28);
             if (tall < 0) return tall;
-            if (tall === 28) return 'å'
-            if (tall === 27) return 'æ'
-            if (tall === 26) return 'ø'
+            if (tall === 28) return 'å';
+            if (tall === 27) return 'æ';
+            if (tall === 26) return 'ø';
             const charCodeA = 'a'.charCodeAt(0);
             return String.fromCharCode(tall + charCodeA);
         }
