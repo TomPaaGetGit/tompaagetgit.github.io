@@ -1,0 +1,15 @@
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.csproj.AssemblyReference.cache
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.AssemblyInfoInputs.cache
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.AssemblyInfo.cs
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.csproj.CoreCompileInputs.cache
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\bin\Debug\net6.0\HarryPotter.exe
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\bin\Debug\net6.0\HarryPotter.deps.json
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\bin\Debug\net6.0\HarryPotter.runtimeconfig.json
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\bin\Debug\net6.0\HarryPotter.dll
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\bin\Debug\net6.0\HarryPotter.pdb
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.dll
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\refint\HarryPotter.dll
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.pdb
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\HarryPotter.genruntimeconfig.cache
+C:\Users\warlo\source\repos\HarryPotter\HarryPotter\obj\Debug\net6.0\ref\HarryPotter.dll
