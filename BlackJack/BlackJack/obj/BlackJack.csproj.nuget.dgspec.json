@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\warlo\\Documents\\GitHub\\tompaagetgit.github.io\\HarryPotter\\HarryPotter\\HarryPotter.csproj": {}
+    "C:\\Users\\warlo\\source\\repos\\BlackJack\\BlackJack\\BlackJack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\warlo\\Documents\\GitHub\\tompaagetgit.github.io\\HarryPotter\\HarryPotter\\HarryPotter.csproj": {
+    "C:\\Users\\warlo\\source\\repos\\BlackJack\\BlackJack\\BlackJack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\warlo\\Documents\\GitHub\\tompaagetgit.github.io\\HarryPotter\\HarryPotter\\HarryPotter.csproj",
-        "projectName": "HarryPotter",
-        "projectPath": "C:\\Users\\warlo\\Documents\\GitHub\\tompaagetgit.github.io\\HarryPotter\\HarryPotter\\HarryPotter.csproj",
+        "projectUniqueName": "C:\\Users\\warlo\\source\\repos\\BlackJack\\BlackJack\\BlackJack.csproj",
+        "projectName": "BlackJack",
+        "projectPath": "C:\\Users\\warlo\\source\\repos\\BlackJack\\BlackJack\\BlackJack.csproj",
         "packagesPath": "C:\\Users\\warlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\warlo\\Documents\\GitHub\\tompaagetgit.github.io\\HarryPotter\\HarryPotter\\obj\\",
+        "outputPath": "C:\\Users\\warlo\\source\\repos\\BlackJack\\BlackJack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\warlo\\AppData\\Roaming\\NuGet\\NuGet.Config",

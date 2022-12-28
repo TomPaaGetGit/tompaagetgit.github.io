@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = HarryPotter
-build_property.ProjectDir = C:\Users\warlo\Documents\GitHub\tompaagetgit.github.io\HarryPotter\HarryPotter\
+build_property.RootNamespace = BlackJack
+build_property.ProjectDir = C:\Users\warlo\source\repos\BlackJack\BlackJack\
