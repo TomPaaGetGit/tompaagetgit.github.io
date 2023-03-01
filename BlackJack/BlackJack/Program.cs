@@ -6,9 +6,10 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-            var test = new DebugGame();
+            var Table = new Table();
 
-            test.TestDebug();
+            Table.Game();
+            
         }
     }
 }

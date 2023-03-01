@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    internal class Deck
+    internal class Deck : IEnumerable
     {
         public List<Card> DeckofCards = new List<Card>();
 
@@ -67,6 +68,11 @@ namespace BlackJack
             DeckofCards.Add(new Card("Diamonds", "Jack", 10));
             DeckofCards.Add(new Card("Diamonds", "Queen", 10));
             DeckofCards.Add(new Card("Diamonds", "King", 10));
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }
