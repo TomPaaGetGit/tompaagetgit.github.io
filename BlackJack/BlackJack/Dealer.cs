@@ -14,11 +14,13 @@ namespace BlackJack
         public Deck Deck = new Deck();
         public RndNum Rnd = new RndNum(53);
         public bool IsBusted { get; set;}
+        public bool HasBlackjack { get; set;}
 
-        public Dealer(int points, bool isBusted)
+        public Dealer(int points, bool isBusted, bool hasBlackjack)
         {
             Points = points;
             IsBusted = isBusted;
+            HasBlackjack = hasBlackjack;
         }
 
         public void InitDealer()
@@ -48,9 +50,7 @@ namespace BlackJack
             //checks if the points total is 21 after the first two cards are dealt.
             if (Points == 21 && Hand.Count == 1)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("DEALER BLACKJACK");
-                Console.ResetColor();
+                HasBlackjack = true;
             }
         }
 

@@ -10,15 +10,15 @@ namespace BlackJack
     internal class Table
     {
         public bool IsRunning = true;
-        Dealer Dealer = new Dealer(0, false);
-        Player Player = new Player(0, 0, true, false, false, false);
+        Dealer Dealer = new Dealer(0, false, false);
+        Player Player = new Player(0, 0, false, false, false, false, false);
         PrintLogic Print = new PrintLogic();
         PlayerInput Input = new PlayerInput();
         public void Game()
         {
             StartGame();
 
-            while (IsRunning == true)
+            while (IsRunning)
             {
                 Print.AskForInput(Player);
                 Input.StringInput();
@@ -54,6 +54,7 @@ namespace BlackJack
         {
             if (Input.SInput == "hit")
             {
+                Console.Clear();
                 Dealer.DealToPlayer(Player);
                 CheckBusted();
                 PrintInfo();
@@ -61,13 +62,15 @@ namespace BlackJack
 
             if (Input.SInput == "split")
             {
+                Console.Clear();
                 Player.DoSplit();
             }
             if (Input.SInput == "stand")
             {
                 Dealer.DealerPlays(Dealer);
-                if (Dealer.IsBusted == true)
+                if (Dealer.IsBusted)
                 {
+                    Console.Clear();
                     Print.PrintDealerBusted(Dealer);
                 }
                 else
@@ -83,6 +86,7 @@ namespace BlackJack
             if (Player.IsBusted)
             {
                 Print.PrintPlayerBusted();
+                IsRunning = false;
             }
         }
         public void CheckWinners()
@@ -90,7 +94,7 @@ namespace BlackJack
             if (Player.Points > Dealer.Points)
             {
                 Print.PrintGameWin(Player, Dealer);
-                if (Player.IsSplit == true)
+                if (Player.IsSplit)
                 {
                     CheckSplitWin();
                 }
@@ -98,7 +102,7 @@ namespace BlackJack
             else if (Player.Points == Dealer.Points)
             {
                 Print.PrintGameDraw(Player, Dealer);
-                if (Player.IsSplit == true)
+                if (Player.IsSplit)
                 {
                     CheckSplitWin();
                 }
@@ -107,7 +111,7 @@ namespace BlackJack
             else
             {
                 Print.PrintGameLoss(Player, Dealer);
-                if (Player.IsSplit == true)
+                if (Player.IsSplit)
                 {
                     CheckSplitWin();
                 }

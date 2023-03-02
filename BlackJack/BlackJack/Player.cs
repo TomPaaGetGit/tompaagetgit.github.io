@@ -12,12 +12,13 @@ namespace BlackJack
         public List<Card> SplitHand = new List<Card>();
         public int Points { get; set; }
         public int SplitPoints { get; set; }
+        public bool HasBlackjack { get; set; }
         public bool IsSplit { get; set; }
         public bool IsSplitAvailable { get; set; }
         public bool IsBusted { get; set; }
         public bool IsSplitBusted { get; set; }
 
-        public Player(int points, int splitPoints, bool isSplit, bool isSplitAvailable, bool isBusted, bool isSplitBusted)
+        public Player(int points, int splitPoints, bool isSplit, bool isSplitAvailable, bool isBusted, bool isSplitBusted, bool hasBlackjack)
         {
             Points = points;
             SplitPoints = splitPoints;
@@ -25,6 +26,7 @@ namespace BlackJack
             IsSplitAvailable = isSplitAvailable;
             IsBusted = isBusted;
             IsSplitBusted = isSplitBusted;
+            HasBlackjack = hasBlackjack;
         }
 
         public void ChkSplit()
@@ -63,6 +65,7 @@ namespace BlackJack
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("BLACKJACK");
                 Console.ResetColor();
+                HasBlackjack = true;
             }
         }
         public void DoSplit()

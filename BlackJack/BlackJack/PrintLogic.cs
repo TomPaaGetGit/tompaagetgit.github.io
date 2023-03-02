@@ -23,15 +23,18 @@ namespace BlackJack
 
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("Your split hand drew");
-            foreach (var Card in Player.SplitHand)
+            if (Player.IsSplit)
             {
-                Console.WriteLine($"{Card.CardName} of {Card.Suite}");
-            }
+                Console.WriteLine("Your split hand drew");
+                foreach (var Card in Player.SplitHand)
+                {
+                    Console.WriteLine($"{Card.CardName} of {Card.Suite}");
+                }
 
-            Console.Write($"Split Hand value: ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write($"{Player.SplitPoints}");
+                Console.Write($"Split Hand value: ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write($"{Player.SplitPoints}");
+            }
             Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine();
@@ -167,12 +170,13 @@ namespace BlackJack
         public void PrintDealerBusted(Dealer Dealer)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("THE DEALER HAS BUSTED WITH");
+            Console.WriteLine("THE DEALER HAS BUSTED WITH ");
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write($"{Dealer.Points}");
+            Console.Write($"{Dealer.Points} ");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("POINTS.");
             Console.ResetColor();
+            Console.WriteLine();
             Console.WriteLine("YOU WIN!");
             Console.ResetColor();
         }
