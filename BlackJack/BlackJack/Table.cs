@@ -46,9 +46,30 @@ namespace BlackJack
             Player.ChkBlkJk();
             Dealer.ChkAce();
             Dealer.ChkBlkJk();
+            if (Player.HasBlackjack || Dealer.HasBlackjack)
+            {
+                HandleBlackJack();
+            }
 
             Print.PrintPlayerDrawn(Player);
             Print.PrintDealerDrawn(Dealer);
+        }
+
+        public void HandleBlackJack()
+        {
+            if (Player.HasBlackjack)
+            {
+                Print.PrintPlayerBlackJack();
+
+            }
+            else if (Dealer.HasBlackjack)
+            {
+                Console.WriteLine("Impliment me :)");
+            }
+            else if (Dealer.HasBlackjack && Player.HasBlackjack)
+            {
+                Console.WriteLine("We both had it???");
+            }
         }
         public void HandleInput()
         {
@@ -64,6 +85,7 @@ namespace BlackJack
             {
                 Console.Clear();
                 Player.DoSplit();
+                PrintInfo();
             }
             if (Input.SInput == "stand")
             {

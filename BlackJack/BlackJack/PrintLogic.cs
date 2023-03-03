@@ -180,5 +180,10 @@ namespace BlackJack
             Console.WriteLine("YOU WIN!");
             Console.ResetColor();
         }
+
+        public void PrintPlayerBlackJack()
+        {
+            Console.WriteLine("PLAYER BLACKJACK!");
+        }
     }
 }

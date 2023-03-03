@@ -62,17 +62,22 @@ namespace BlackJack
             //checks if the points total is 21 after the first two cards are dealt.
             if (Points == 21 && Hand.Count == 1)
             {
+                HasBlackjack = true;
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("BLACKJACK");
                 Console.ResetColor();
-                HasBlackjack = true;
             }
         }
         public void DoSplit()
         {
-            IsSplit = true;
-            SplitHand.Add(Hand[1]);
-            Hand.Remove(Hand[1]);
+            if (IsSplit != true)
+            {
+                IsSplit = true;
+                SplitHand.Add(Hand[1]);
+                SplitPoints = SplitHand[0].CardValue;
+                Points -= Hand[1].CardValue;
+                Hand.Remove(Hand[1]);
+            }
         }
     }
 }
