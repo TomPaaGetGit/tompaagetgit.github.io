@@ -9,7 +9,12 @@ namespace BlackJack
     internal class PlayerInput
     {
         public string SInput { get; set; } = null!;
+        public int NInput { get; set; }
 
+        public void NumberInput()
+        {
+            NInput = Int32.Parse(Console.ReadLine());
+        }
         public void StringInput()
         {
             SInput = Console.ReadLine()!.ToLower();

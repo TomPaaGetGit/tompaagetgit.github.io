@@ -8,8 +8,24 @@ namespace BlackJack
 {
     internal class PrintLogic
     {
+        public void PrintPlayerBet(Player Player)
+        {
+            Console.Write("Your current bet: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"${Player.CurrentBet}");
+            Console.ResetColor();
+            Console.WriteLine();
+        }
         public void PrintPlayerDrawn(Player Player)
         {
+            if (Player.IsSplitAvailable && Player.IsSplit == false)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("---------------");
+                Console.WriteLine("SPLIT AVAILABLE");
+                Console.WriteLine("---------------");
+                Console.ResetColor();
+            }
             Console.WriteLine("Your main hand drew");
             foreach (var Card in Player.Hand)
             {
@@ -63,12 +79,21 @@ namespace BlackJack
             Console.WriteLine();
         }
 
-        public void AskForInput(Player Player)
+        public void AskForBetInput(Player Player)
+        {
+            Console.WriteLine("How much would you like to bet?");
+            Console.Write("You have: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"${Player.Money}");
+            Console.ResetColor();
+            Console.WriteLine();
+        }
+        public void AskForGameInput(Player Player)
         {
             Console.WriteLine("What do you wish to do now?");
             Console.WriteLine("Hit");
             Console.WriteLine("Stand");
-            if (Player.IsSplitAvailable != true) return;
+            if (Player.IsSplitAvailable != true || Player.IsSplit) return;
             Console.WriteLine("Split");
         }
 
@@ -184,6 +209,16 @@ namespace BlackJack
         public void PrintPlayerBlackJack()
         {
             Console.WriteLine("PLAYER BLACKJACK!");
+        }
+
+        public void PrintDealerBlackJack()
+        {
+            Console.WriteLine("DEALER BLACKJACK!");
+        }
+
+        public void PrintBothBlackJack()
+        {
+            Console.WriteLine("BOTH HAVE BLACKJACK.");
         }
     }
 }

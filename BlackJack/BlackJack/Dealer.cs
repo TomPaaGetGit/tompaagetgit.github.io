@@ -12,7 +12,7 @@ namespace BlackJack
         public List<Card> Hand = new List<Card>();
         public int Points { get; set; }
         public Deck Deck = new Deck();
-        public RndNum Rnd = new RndNum(53);
+        public RndNum Rnd = new RndNum(52);
         public bool IsBusted { get; set;}
         public bool HasBlackjack { get; set;}
 
@@ -34,23 +34,17 @@ namespace BlackJack
             Dealer.Points += Deck.DeckofCards[num].CardValue;
             Deck.DeckofCards.Remove(Deck.DeckofCards[num]);
             Rnd.Size = Deck.DeckofCards.Count;
+            if (Dealer.Points == 21)
+            {
+                HasBlackjack = true;
+            }
         }
         public void ChkAce()
         {
-            //checks if the player has an ace in their hand after the first two cards are dealt.
-            // Aces are worth either 1 or 11 points.
             if (Hand.Count == 1 && Hand[0].CardName.Contains("Ace") ||
                 Hand[1].CardName.Contains("Ace"))
             {
                 Points += 10;
-            }
-        }
-        public void ChkBlkJk()
-        {
-            //checks if the points total is 21 after the first two cards are dealt.
-            if (Points == 21 && Hand.Count == 1)
-            {
-                HasBlackjack = true;
             }
         }
 
@@ -71,12 +65,16 @@ namespace BlackJack
         }
         public void DealToPlayer(Player Player)
         {
-            if (Player.IsBusted == true) return;
+            if (Player.IsBusted) return;
             var num = Rnd.RandomNumber();
             Player.Hand.Add(Deck.DeckofCards[num]);
             Player.Points += Deck.DeckofCards[num].CardValue;
             Deck.DeckofCards.Remove(Deck.DeckofCards[num]);
             Rnd.Size = Deck.DeckofCards.Count;
+            if (Player.Points == 21 && Hand.Count <= 1)
+            {
+                Player.HasBlackjack = true;
+            }
             if (Player.Points > 21)
             {
                 Player.IsBusted = true;

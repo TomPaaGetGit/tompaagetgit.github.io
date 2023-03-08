@@ -11,6 +11,8 @@ namespace BlackJack
         public List<Card> Hand = new List<Card>();
         public List<Card> SplitHand = new List<Card>();
         public int Points { get; set; }
+        public int Money { get; set; }
+        public int CurrentBet { get; set; }
         public int SplitPoints { get; set; }
         public bool HasBlackjack { get; set; }
         public bool IsSplit { get; set; }
@@ -18,7 +20,7 @@ namespace BlackJack
         public bool IsBusted { get; set; }
         public bool IsSplitBusted { get; set; }
 
-        public Player(int points, int splitPoints, bool isSplit, bool isSplitAvailable, bool isBusted, bool isSplitBusted, bool hasBlackjack)
+        public Player(int points, int splitPoints, bool isSplit, bool isSplitAvailable, bool isBusted, bool isSplitBusted, bool hasBlackjack, int money, int currentBet)
         {
             Points = points;
             SplitPoints = splitPoints;
@@ -27,6 +29,8 @@ namespace BlackJack
             IsBusted = isBusted;
             IsSplitBusted = isSplitBusted;
             HasBlackjack = hasBlackjack;
+            Money = money;
+            CurrentBet = currentBet;
         }
 
         public void ChkSplit()
@@ -35,11 +39,6 @@ namespace BlackJack
             //new hands.
             if (Hand[0].CardValue == Hand[1].CardValue)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("---------------");
-                Console.WriteLine("SPLIT AVAILABLE");
-                Console.WriteLine("---------------");
-                Console.ResetColor();
                 IsSplitAvailable = true;
             }
         }
@@ -51,21 +50,7 @@ namespace BlackJack
                 Hand[1].CardName.Contains("Ace"))
             {
                 IsSplitAvailable = true;
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("ACE FOUND");
                 Points += 10;
-                Console.ResetColor();
-            }
-        }
-        public void ChkBlkJk()
-        {
-            //checks if the points total is 21 after the first two cards are dealt.
-            if (Points == 21 && Hand.Count == 1)
-            {
-                HasBlackjack = true;
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("BLACKJACK");
-                Console.ResetColor();
             }
         }
         public void DoSplit()

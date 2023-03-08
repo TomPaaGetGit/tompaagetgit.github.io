@@ -9,31 +9,41 @@ namespace BlackJack
 {
     internal class Table
     {
-        public bool IsRunning = true;
+        public bool IsRunning = false;
         Dealer Dealer = new Dealer(0, false, false);
-        Player Player = new Player(0, 0, false, false, false, false, false);
+        Player Player = new Player(0, 0, false, false, false, false, false, 1000, 0);
         PrintLogic Print = new PrintLogic();
         PlayerInput Input = new PlayerInput();
         public void Game()
         {
+            TakeBets();
             StartGame();
 
             while (IsRunning)
             {
-                Print.AskForInput(Player);
+                Print.AskForGameInput(Player);
                 Input.StringInput();
-                HandleInput();
+                HandleGameInput();
             }
         }
 
         public void PrintInfo()
         {
+            Console.Clear();
+            Print.PrintPlayerBet(Player);
             Print.PrintPlayerDrawn(Player);
             Print.PrintDealerDrawn(Dealer);
         }
 
+        public void TakeBets()
+        {
+            Print.AskForBetInput(Player);
+            Input.NumberInput();
+            HandleBetInput();
+        }
         public void StartGame()
         {
+            IsRunning = true;
             Dealer.InitDealer();
 
             Dealer.DealToPlayer(Player);
@@ -43,36 +53,66 @@ namespace BlackJack
 
             Player.ChkSplit();
             Player.ChkAce();
-            Player.ChkBlkJk();
             Dealer.ChkAce();
-            Dealer.ChkBlkJk();
+
             if (Player.HasBlackjack || Dealer.HasBlackjack)
             {
                 HandleBlackJack();
             }
-
-            Print.PrintPlayerDrawn(Player);
-            Print.PrintDealerDrawn(Dealer);
+            else
+            {
+                PrintInfo();
+            }
         }
 
         public void HandleBlackJack()
         {
-            if (Player.HasBlackjack)
+            if (Dealer.HasBlackjack && Player.HasBlackjack)
             {
+                Console.Clear();
+                Print.PrintPlayerDrawn(Player);
+                Print.PrintDealerDrawn(Dealer);
+                Print.PrintBothBlackJack();
+                IsRunning = false;
+            }
+
+            if (Player.HasBlackjack && IsRunning)
+            {
+                Console.Clear();
+                Print.PrintPlayerDrawn(Player);
+                Print.PrintDealerDrawn(Dealer);
                 Print.PrintPlayerBlackJack();
+                IsRunning = false;
 
             }
-            else if (Dealer.HasBlackjack)
+            else if (Dealer.HasBlackjack && IsRunning)
             {
-                Console.WriteLine("Impliment me :)");
-            }
-            else if (Dealer.HasBlackjack && Player.HasBlackjack)
-            {
-                Console.WriteLine("We both had it???");
+                Console.Clear();
+                Print.PrintPlayerDrawn(Player);
+                Print.PrintDealerDrawn(Dealer);
+                Print.PrintDealerBlackJack();
+                IsRunning = false;
             }
         }
-        public void HandleInput()
+
+        public void HandleBetInput()
         {
+            if (Input.NInput > Player.Money)
+            {
+                Console.WriteLine("Broke bitch.");
+                TakeBets();
+            }
+            else
+            {
+                Player.CurrentBet = Input.NInput;
+            }
+        }
+        public void HandleGameInput()
+        {
+            if (Input.SInput == "e" || Input.SInput == "")
+            {
+                IsRunning = false;
+            }
             if (Input.SInput == "hit")
             {
                 Console.Clear();
@@ -93,6 +133,8 @@ namespace BlackJack
                 if (Dealer.IsBusted)
                 {
                     Console.Clear();
+                    Print.PrintPlayerDrawn(Player);
+                    Print.PrintDealerDrawn(Dealer);
                     Print.PrintDealerBusted(Dealer);
                 }
                 else
