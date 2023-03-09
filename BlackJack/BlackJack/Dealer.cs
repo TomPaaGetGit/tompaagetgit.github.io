@@ -34,6 +34,11 @@ namespace BlackJack
             Dealer.Points += Deck.DeckofCards[num].CardValue;
             Deck.DeckofCards.Remove(Deck.DeckofCards[num]);
             Rnd.Size = Deck.DeckofCards.Count;
+
+        }
+
+        public void DealerCheckBlackJack(Dealer Dealer)
+        {
             if (Dealer.Points == 21)
             {
                 HasBlackjack = true;
@@ -71,16 +76,12 @@ namespace BlackJack
             Player.Points += Deck.DeckofCards[num].CardValue;
             Deck.DeckofCards.Remove(Deck.DeckofCards[num]);
             Rnd.Size = Deck.DeckofCards.Count;
-            if (Player.Points == 21 && Hand.Count <= 1)
-            {
-                Player.HasBlackjack = true;
-            }
             if (Player.Points > 21)
             {
                 Player.IsBusted = true;
             }
 
-            if (Player.IsSplit != true || Player.IsSplitBusted == true) return;
+            if (Player.IsSplit != true || Player.IsSplitBusted) return;
             var num2 = Rnd.RandomNumber();
             Player.SplitHand.Add(Deck.DeckofCards[num2]);
             Player.SplitPoints += Deck.DeckofCards[num2].CardValue;

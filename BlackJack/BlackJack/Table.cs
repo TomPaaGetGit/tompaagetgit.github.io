@@ -55,14 +55,10 @@ namespace BlackJack
             Player.ChkAce();
             Dealer.ChkAce();
 
-            if (Player.HasBlackjack || Dealer.HasBlackjack)
-            {
-                HandleBlackJack();
-            }
-            else
-            {
-                PrintInfo();
-            }
+            Dealer.DealerCheckBlackJack(Dealer);
+            Player.PlayerCheckBlackJack(Player);
+
+            HandleBlackJack();
         }
 
         public void HandleBlackJack()
@@ -92,6 +88,10 @@ namespace BlackJack
                 Print.PrintDealerDrawn(Dealer);
                 Print.PrintDealerBlackJack();
                 IsRunning = false;
+            }
+            else
+            {
+                PrintInfo();
             }
         }
 

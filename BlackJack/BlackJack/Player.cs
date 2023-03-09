@@ -42,6 +42,14 @@ namespace BlackJack
                 IsSplitAvailable = true;
             }
         }
+
+        public void PlayerCheckBlackJack(Player Player)
+        {
+            if (Player.Points == 21)
+            {
+                Player.HasBlackjack = true;
+            }
+        }
         public void ChkAce()
         {
             //checks if the player has an ace in their hand after the first two cards are dealt.
@@ -49,7 +57,6 @@ namespace BlackJack
             if (Hand.Count == 1 && Hand[0].CardName.Contains("Ace") ||
                 Hand[1].CardName.Contains("Ace"))
             {
-                IsSplitAvailable = true;
                 Points += 10;
             }
         }
