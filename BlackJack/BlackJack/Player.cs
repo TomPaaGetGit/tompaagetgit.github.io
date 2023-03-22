@@ -52,8 +52,6 @@ namespace BlackJack
         }
         public void ChkAce()
         {
-            //checks if the player has an ace in their hand after the first two cards are dealt.
-            // Aces are worth either 1 or 11 points.
             if (Hand.Count == 1 && Hand[0].CardName.Contains("Ace") ||
                 Hand[1].CardName.Contains("Ace"))
             {

@@ -79,6 +79,10 @@ namespace BlackJack
             Console.WriteLine();
         }
 
+        public void PrintBetError()
+        {
+            Console.WriteLine("Error placing bet, please try again.");
+        }
         public void AskForBetInput(Player Player)
         {
             Console.WriteLine("How much would you like to bet?");

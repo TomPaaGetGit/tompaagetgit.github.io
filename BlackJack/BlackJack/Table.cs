@@ -10,7 +10,7 @@ namespace BlackJack
     internal class Table
     {
         public bool IsRunning = false;
-        Dealer Dealer = new Dealer(0, false, false);
+        Dealer Dealer = new Dealer(0, false, true);
         Player Player = new Player(0, 0, false, false, false, false, false, 1000, 0);
         PrintLogic Print = new PrintLogic();
         PlayerInput Input = new PlayerInput();
@@ -99,7 +99,7 @@ namespace BlackJack
         {
             if (Input.NInput > Player.Money)
             {
-                Console.WriteLine("Broke bitch.");
+                Print.PrintBetError();
                 TakeBets();
             }
             else
@@ -117,8 +117,8 @@ namespace BlackJack
             {
                 Console.Clear();
                 Dealer.DealToPlayer(Player);
+                PrintInfo(); 
                 CheckBusted();
-                PrintInfo();
             }
 
             if (Input.SInput == "split")
@@ -149,8 +149,11 @@ namespace BlackJack
         {
             if (Player.IsBusted)
             {
-                Print.PrintPlayerBusted();
                 IsRunning = false;
+                Console.Clear();
+                Print.PrintPlayerDrawn(Player);
+                Print.PrintDealerDrawn(Dealer);
+                Print.PrintPlayerBusted();
             }
         }
         public void CheckWinners()
